@@ -1,30 +1,9 @@
-import { useState, useEffect } from "react";
 import "../css/App.css";
-import { server } from "../App";
+import { useContext } from "react";
+import { DataContext } from "../App";
 
 const Products = () => {
-  const [data, setData] = useState([]);
-  const [cart, setCart] = useState([]);
-  const [page, setPage] = useState(1);
-
-  useEffect(() => {
-    const getDataController = new AbortController();
-    server
-      .get(`/p/${page}`, { signal: getDataController.signal })
-      .then((res) => {
-        res.data?.test.map((item) => {
-          setData((prev) => {
-            if (prev.includes(item)) return prev;
-            else return [...prev, item];
-          });
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-
-    return () => getDataController.abort();
-  }, [page]);
+  const { data, cart, setCart, setPage } = useContext(DataContext);
 
   const addToCart = (id) => {
     setCart((prev) => {
