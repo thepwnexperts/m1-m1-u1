@@ -7,8 +7,8 @@ const NavBar = () => {
             <nav className="navbar">
                 <p>PWN Experts</p>
                 <ul>
-                    <li><Link to={'/'}>Home</Link></li>
-                    <li><Link to={'/cart'}>Cart</Link></li>
+                    <li><Link className='btn' to={'/'}>Home</Link></li>
+                    <li><Link className='btn' to={'/cart'}>Cart</Link></li>
                 </ul>
             </nav>
         </div>

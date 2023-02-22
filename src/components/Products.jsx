@@ -36,7 +36,7 @@ const Products = () => {
           </div>
         );
       })}
-      <div className="loadMoreLink"><a onClick={(e) => {e.preventDefault(); setPage((prev) => prev + 1)}}>Load more...</a></div>
+      <div className="loadMoreLink btn"><a onClick={(e) => {e.preventDefault(); setPage((prev) => prev + 1)}}>Load more...</a></div>
     </div>
   );
 };

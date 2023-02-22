@@ -11,7 +11,7 @@ const ErrorPage = () => {
                     {error?.statusText || error?.message}
                 </i>
             </p>
-            <Link to={'/'}>Go back to home</Link>
+            <Link className="btn" to={'/'}>Go back to home</Link>
         </div>
     )
 }
