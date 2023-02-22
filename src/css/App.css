@@ -118,3 +118,33 @@
     text-align: center;
     margin: 20px;
 }
+
+.errorPage{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.errorPage h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.errorPage p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.errorPage a{
+    text-decoration: none;
+    color: rgb(14, 85, 97);
+    border: 1px solid rgb(14, 85, 97);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
