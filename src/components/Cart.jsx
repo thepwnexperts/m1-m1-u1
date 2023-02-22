@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { DataContext } from "../App";
 import { useState } from "react";
 import { server } from "../App";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { data, cart, setCart } = useContext(DataContext);
@@ -58,6 +59,7 @@ const Cart = () => {
             );
           })}
           <h2>Total Amount: ₹{orderPrice}</h2>
+          <Link className="btn checkoutBtn" to='/checkout' state={{orderPrice: orderPrice}}>Place Order</Link>
         </div>
       )}
     </div>

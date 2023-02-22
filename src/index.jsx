@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App'
 import Cart from './components/Cart'
+import Checkout from './components/Checkout';
 import ErrorPage from './components/error-page';
 import Products from './components/Products';
 import './css/index.css'
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: '/checkout',
+    element: <Checkout/>
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
