@@ -1,10 +1,30 @@
-import { useContext } from "react";
+import { useState, useEffect } from "react";
 import "../css/App.css";
 import { server } from "../App";
-import { cartContext } from "../App";
 
-const Products = ({ data }) => {
-  const { cart, setCart} = useContext(cartContext);
+const Products = () => {
+  const [data, setData] = useState([]);
+  const [cart, setCart] = useState([]);
+  const [page, setPage] = useState(1);
+
+  useEffect(() => {
+    const getDataController = new AbortController();
+    server
+      .get(`/p/${page}`, { signal: getDataController.signal })
+      .then((res) => {
+        res.data?.test.map((item) => {
+          setData((prev) => {
+            if (prev.includes(item)) return prev;
+            else return [...prev, item];
+          });
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    return () => getDataController.abort();
+  }, [page]);
 
   const addToCart = (id) => {
     setCart((prev) => {
@@ -37,6 +57,7 @@ const Products = ({ data }) => {
           </div>
         );
       })}
+      <div className="loadMoreLink"><a onClick={(e) => {e.preventDefault(); setPage((prev) => prev + 1)}}>Load more...</a></div>
     </div>
   );
 };
