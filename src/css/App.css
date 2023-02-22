@@ -25,12 +25,6 @@
 .navbar p{
     position: relative;
     top: -10px;
-    border: 1px solid rgb(14, 85, 97);
-    border-radius: 5px;
-    padding: 10px;
-    color: rgb(14, 85, 97);
-    font-size: 20px;
-    font-weight: bolder;
 }
 
 .productList{

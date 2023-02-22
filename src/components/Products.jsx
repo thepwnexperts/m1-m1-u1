@@ -20,7 +20,7 @@ const Products = () => {
             <img className='productImage' src={item.image} alt={item.name} />
             <div className="productDetails">
               <h3>{item.name}</h3>
-              <p>₹ {item.price}</p>
+              <p>₹{item.price}</p>
             </div>
             <a
               href=''
