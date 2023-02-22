@@ -1,6 +1,8 @@
 const Cart = ()=> {
     return(
-        <div></div>
+        <div>
+            Hello There
+        </div>
     )
 }
 
