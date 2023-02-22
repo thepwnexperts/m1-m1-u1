@@ -1,3 +1,37 @@
+.navbar{
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.navbar p{
+    position: relative;
+    top: -10px;
+    border: 1px solid rgb(14, 85, 97);
+    border-radius: 5px;
+    padding: 10px;
+    color: rgb(14, 85, 97);
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.navbar a{
+    border: 1px solid rgb(14, 85, 97);
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(14, 85, 97);
+    font-size: 20px;
+    font-weight: bolder;
+}
+
 .productList{
     display: grid;
     justify-content: center;
@@ -54,7 +88,7 @@
         display: grid;
         grid-template-columns: repeat(3, auto);
         grid-template-rows:repeat(1, 1fr);
-        width: 90%;
+        width: 100%;
         gap: 20px;
     }
 
@@ -70,4 +104,17 @@
     .addToCart{
         grid-column: 3 / 4;
     }
+}
+
+.loadMoreLink{
+    text-decoration: none;
+    color: rgb(14, 85, 97);
+    border: 1px solid rgb(14, 85, 97);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px;
 }
