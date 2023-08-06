@@ -6,13 +6,14 @@ import { Outlet } from "react-router-dom";
 
 export const DataContext = createContext();
 
+
 export const server = axios.create({
-  baseURL: "http://thepwnexperts.com:3000/",
+     baseURL: import.meta.env.VITE_BASE_URL,
+
 });
 
 
 function App() {
-
   const [data, setData] = useState([]);
   const [cart, setCart] = useState([]);
   const [page, setPage] = useState(1);
